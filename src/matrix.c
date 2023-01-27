@@ -1,5 +1,13 @@
 #include<matrix.h> // à modifier
 
+matrix_t clone_matrix(matrix_t m) {
+  matrix_t c = m;
+  size_t space=c.row_size*c.col_size*sizeof(double);
+  c.values = malloc(space);
+  memcpy(c.values, m.values, space);
+  return c;
+}
+
 double m_get(matrix_t m, unsigned i, unsigned j) {
   assert(i<m.row_size && j<m.col_size);
   return m.values[i*m.col_size+j];

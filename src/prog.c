@@ -1,6 +1,6 @@
 #include<matrix.h> // à modifier
 #include<vector.h>
-// lllllllllllllllllllll
+
 int main() {
   vector_t v,w;
   int i,j;

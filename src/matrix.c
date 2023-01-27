@@ -1,5 +1,14 @@
 #include<matrix.h> // à modifier
 
+matrix_t make_identity_matrix(unsigned n) {
+  matrix_t id = make_matrix(n,n);
+  unsigned i,j;
+  for(i=0; i<n; i++)
+    for(j=0; j<n; j++)
+      m_set(id, i, j, i==j);
+  return id;
+}
+
 double m_get(matrix_t m, unsigned i, unsigned j) {
   assert(i<m.row_size && j<m.col_size);
   return m.values[i*m.col_size+j];

@@ -10,6 +10,7 @@
 #include<stdlib.h>
 #include<math.h>
 #include<assert.h>
+#include<string.h>
 
 /** @brief Definition of vector_t type  */ 
 typedef struct {

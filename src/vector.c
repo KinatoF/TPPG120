@@ -1,6 +1,14 @@
 #include<vector.h>
 
 
+vector_t clone_vector(vector_t v) {
+  vector_t c = v;
+  size_t space=c.size*sizeof(double);
+  c.values = malloc(space);
+  memcpy(c.values, v.values, space);
+  return c;
+}
+
 vector_t make_vector(unsigned s) {
   unsigned i;
   vector_t v;
